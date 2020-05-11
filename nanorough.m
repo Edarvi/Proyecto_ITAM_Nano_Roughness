@@ -8,8 +8,8 @@ function nanorough
          % de la funcion que queremos llamar (hasta ahora solo funciona
          % como un nombre, no afecta el nombre aqui con el de las funciones
          % reales
-    opciones = {'opcion 1', 'opcion 2', 'opcion 3', 'opcion 4', ...
-        'opcion 5', 'opcion 6', 'opcion 7', 'Salir'};
+    opciones = {'Zprom', 'Ra', 'Rq', 'Rp & Rv', 'Rt', 'Rz', 'Rsk', ...
+        'Salir'};
         % El vector 'Z' es el vector que tiene los valores de la linea que
         %cruza la imagen. Se inicializa como vector vacio y se le agregan
         %los valores conforme el funcionamiento del programa.
@@ -17,7 +17,11 @@ function nanorough
         % inicio de un ciclo para mostrar nuestro menu que terminara hasta
         % que se escoga la opcion 8 que cambia x = false y termina el
         % ciclo.
-    x = true; 
+    x = true;
+        % Booleanos de control para saber si existe el valor o no
+    BRpRv = false;
+    BZprom = false;
+    
     while x == true
 
        %este comando muestra el menu con todas sus opciones
@@ -28,18 +32,38 @@ function nanorough
         switch choice
            case 1
                fprintf('Escogió la opción #1 \n')
+               Zprom = Zprom(Z);
+               P = P(Z, Zprom);
+               V = V(Z, Zprom);
+               BZprom = true;
            case 2
                fprintf('Escogió la opción #2 \n')
+               % Ra
            case 3
-               Rq
                fprintf('Escogió la opción #3 \n')
+               % Falta Rq
            case 4
                fprintf('Escogió la opción #4 \n')
-               RpRv(Z)
+               % Regresa un vector para poder usar Rp y Rv mas facilmente,
+               %RpRv(1) = Rp y RpRv(2) = Rv
+               RpRv = RpRv(Z)
+               BRpRv = true;
            case 5
                fprintf('Escogió la opción #5 \n')
+               if BRpRv == true
+                   (RpRv(1)-RpRv(2))
+               else
+                   msgbox(['Primero se necesitan calcular los valores' ...
+                       'de Rp y Rv']);
+               end
            case 6
                fprintf('Escogió la opción #6 \n')
+               if BZprom == true
+                   Rz(P, V)
+               else
+                   msgbox(['Primero se necesita calcular el valor de' ...
+                       'Zprom']);
+               end
            case 7
                Rsk(Z, Rq)
                fprintf('Escogió la opción #7 \n')

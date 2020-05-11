@@ -3,7 +3,7 @@ Documentación para proyecto ITAM nano roughness de introduccion a la ingenieria
 
 ### Equipo formado por: 
 	- Eduardo Arredondo Villa
-	- Alexis Hernández Monteverde
+	- Luis Angel Valera Ortega
 	- Benjamin Goñi Hernandez
 	- Chan Mun Won Lee
 

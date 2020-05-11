@@ -5,8 +5,8 @@ function [Rsk] = Rsk(Z, Rq)
     cont = 0;
     
     for i = 1:length(Z)
-        cont = cont+Z(i)-Zprom;
+        cont = cont+((Z(i)-Zprom)^3);
     end
-    Rsk = (cont^3)/(length(Z)*Rq^3);
+    Rsk = (cont^3)/(length(Z)*Rq);
 end
 
