@@ -10,23 +10,20 @@ Documentación para proyecto ITAM nano roughness de introduccion a la ingenieria
 Incluye:
 
 ## nanorough:
-	función que ejecuta un menu para selecionar las distintas funciones para hacer las "Roughness Calculations".
 	
-## Nueva Trayectoria:
-	Función que le pide al usuario los datos de una trayectoria para iniciar los calculos de el resto de las funciones.
+## Nueva Trayectoria
 	
-## Zprom:
-	Función que calcula el promedio de la trayectoria.
+## Zprom
 	
-## Ra: 
+## Ra
 
-## RpRv: 
+## RpRv
 
-## Rt:
+## Rt
 
-## Rz:
+## Rz
 
-## Rsk:
+## Rsk
 
 
 
