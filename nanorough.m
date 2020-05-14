@@ -41,7 +41,7 @@ function nanorough
                % Ra
            case 3
                fprintf('Escogió la opción #3 \n')
-               % Falta Rq
+               Rq(Z)
            case 4
                fprintf('Escogió la opción #4 \n')
                % Regresa un vector para poder usar Rp y Rv mas facilmente,
@@ -65,8 +65,8 @@ function nanorough
                        'Zprom']);
                end
            case 7
-               Rsk(Z, Rq)
                fprintf('Escogió la opción #7 \n')
+               Rsk(Z, Rq)
            case 8
                x = false;
                fprintf('Programa terminado \n')

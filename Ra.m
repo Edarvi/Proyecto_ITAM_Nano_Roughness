@@ -1,4 +1,4 @@
-function [Ra] = Function2(Z, Zv , n)
+function [Ra] = Ra(Z, Zv , n)
 %UNTITLED2 Summary of this function goes here
 %   Detailed explanation goes here
 i=0;
